@@ -1,0 +1,290 @@
+/* LoginPage.css */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 16px; 
+  zoom: 100%; 
+}
+
+body {
+  margin: 0;
+  font-family: 'Lora', serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.login-title,
+.nav-links a,
+.btn-primary,
+.btn-outline,
+.btn-google span {
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-container {
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Context for absolutely positioned elements */
+}
+
+/* ------------------------------------- */
+/* ABSOLUTELY POSITIONED DECORATIVE ICONS */
+/* Using VW units to scale with the screen */
+/* ------------------------------------- */
+
+.virus {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  width: 10vw; /* Scaled down slightly and uses viewport width */
+  max-width: 152px;
+}
+
+.mosquito {
+  position: absolute;
+  bottom: 15%;
+  left: 28%;
+  width: 15vw; /* Scales with screen width */
+  max-width: 214px;
+}
+
+.mosquito-2 {
+  position: absolute;
+  bottom: 30%;
+  right: 10%;
+  width: 20vw; /* Scales with screen width */
+  max-width: 291px;
+}
+
+.syringe {
+  position: absolute;
+  top: 28%;
+  right: 32%;
+  width: 6vw; /* Scales with screen width */
+  max-width: 90px;
+}
+
+.syringe-2 {
+  position: absolute;
+  bottom: 40px; 
+  left: -10px; 
+  width: 6vw; /* Scales with screen width */
+  max-width: 90px;
+  z-index: 2;
+}
+
+/* ------------------------------------- */
+/* NAVBAR */
+/* ------------------------------------- */
+.navbar {
+  background: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #052C65;
+  font-weight: 500;
+}
+
+.nav-links a.active {
+  color: #0066cc;
+  border-bottom: 2px solid #0066cc;
+}
+
+.btn-outline, .btn-primary {
+  padding: 6px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap; /* Prevents text from wrapping */
+  font-size: 16px;
+}
+
+.btn-outline {
+  border: 1px solid #052C65;
+  background: none;
+}
+
+.btn-primary {
+  border: none;
+  background: #052C65;
+  color: white;
+}
+
+/* ------------------------------------- */
+/* LOGIN BOX */
+/* ------------------------------------- */
+.login-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Add padding to prevent sticking to edges on mobile */
+}
+
+.login-box {
+  position: relative; 
+  background: transparent;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 40px;
+  border-radius: 10px;
+  border: 1px solid #052C65;
+  width: 100%;
+  max-width: 400px; /* Maintains desktop size */
+  text-align: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.login-title {
+  background: linear-gradient(to right, #052C65, #0A58CB);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  background-clip: text; 
+  color: transparent;
+  font-size: 56px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  color: #052C65;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 95%; /* Adjusted to 95% to allow for a slight gap/padding */
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+/* Buttons */
+.btn-gradient {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to right, #052C65, #0A58CB);
+  color: white;
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px 0 20px;
+}
+
+.btn-gradient:hover {
+  background: white;
+  color: #052C65; /* Fallback for gradient text */
+  border: 1px solid #052C65;
+}
+
+.divider {
+  font-size: 14px;
+  color: #052C65;
+  margin-bottom: 15px;
+}
+
+.btn-google {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #052C65;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn-google FcGoogle {
+  width: 18px;
+  height: 18px;
+}
+
+.btn-google:hover {
+  background: linear-gradient(to right, #052C65, #0A58CB);
+  color: white;
+}
+
+/* Ensure Google button text/icon colors change on hover */
+.btn-google:hover span {
+    color: white;
+}
+
+/* ------------------------------------- */
+/* MOBILE SPECIFIC ADJUSTMENTS (Max 480px) */
+/* This is only for essential layout fixes, keeping the look the same */
+/* ------------------------------------- */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .nav-links {
+        gap: 8px; /* Reduce gap to fit links */
+    }
+    
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .btn-outline, .btn-primary {
+        padding: 4px 8px;
+        font-size: 0.9rem;
+    }
+
+    .login-box {
+        padding: 25px;
+    }
+
+    .login-title {
+        font-size: 36px; /* Essential reduction for mobile */
+    }
+    
+    .form-group label {
+        font-size: 20px; /* Essential reduction for mobile */
+    }
+    
+    .form-group input {
+        font-size: 16px;
+    }
+
+    /* Reduce the size of the biggest absolute-positioned elements slightly more on small screens */
+    .mosquito-2 {
+        width: 25vw;
+    }
+}

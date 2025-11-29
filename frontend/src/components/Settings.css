@@ -1,0 +1,186 @@
+/* ProfileSettings.css */
+
+.profile-container {
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* --- Header & Tabs --- */
+.profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.profile-avatar-large {
+    width: 80px;
+    height: 80px;
+    background-color: #052C65;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0 auto 15px;
+}
+
+.profile-header h1 {
+    font-size: 2.5rem;
+    color: #052C65;
+    margin-bottom: 5px;
+}
+
+.profile-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ddd;
+}
+
+.profile-tabs .tab {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #555;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+.profile-tabs .tab.active {
+    color: #0A58CB;
+    font-weight: 700;
+    border-bottom: 3px solid #0A58CB;
+}
+
+/* --- General Card & Grid Layouts --- */
+.profile-grid, .settings-forms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.profile-card, .settings-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+}
+
+.profile-card h2, .settings-card h2 {
+    color: #0A58CB;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.profile-card p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* --- Form Styles --- */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.settings-btn-primary,.resend-btn {
+    width: 100%;
+    padding: 10px;
+    background: #052C65;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.settings-btn-danger {
+    width: 100%;
+    padding: 10px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* --- Feedback & Notes --- */
+.feedback-success {
+    color: #28a745;
+    background-color: #d4edda;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.feedback-error {
+    color: #dc3545;
+    background-color: #f8d7da;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.email-note {
+    display: block;
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* --- History Table for View Tab --- */
+.history-card {
+    grid-column: 1 / -1; /* Spans full width */
+}
+.history-card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.history-card th, .history-card td {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+.result-positive { color: #dc3545; font-weight: bold; }
+.result-negative { color: #28a745; }
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 20px;
+    }
+    .profile-grid, .settings-forms-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

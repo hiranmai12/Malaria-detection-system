@@ -1,0 +1,119 @@
+/* ProfileDropdown.css */
+
+.profile-dropdown-container {
+    /* Critical for positioning the menu absolutely relative to the trigger */
+    position: relative; 
+    cursor: pointer;
+    /* Aligns the profile next to other nav links */
+    margin-left: 20px;
+    /* Ensure the profile icon is visible and clickable */
+    z-index: 10; 
+}
+
+/* --- Profile Trigger (The clickable area: Avatar + Name) --- */
+.profile-trigger {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px 5px 5px; /* Adjust padding for better look around the avatar */
+    border-radius: 25px;
+    background-color: #f0f4f8; /* Light background for visibility */
+    transition: background-color 0.2s;
+}
+
+.profile-trigger:hover {
+    background-color: #e0e6ec;
+}
+
+/* --- Avatar Circle --- */
+.profile-avatar {
+    width: 35px;
+    height: 35px;
+    background-color: #052C65; /* Deep blue background matching your theme */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-right: 8px;
+    /* Ensure the avatar itself is not clickable, only the container */
+    pointer-events: none; 
+}
+
+.profile-name {
+    color: #052C65;
+    font-weight: 600;
+    margin-right: 5px;
+    white-space: nowrap; /* Prevent user name from wrapping */
+}
+
+/* --- Dropdown Menu Styles --- */
+.dropdown-menu {
+    position: absolute;
+    /* Position below the trigger */
+    top: 100%; 
+    /* Align to the right edge of the trigger container */
+    right: 0; 
+    
+    margin-top: 10px;
+    width: 220px; /* Slightly wider for menu items */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ddd;
+    z-index: 1000;
+    overflow: hidden;
+    text-align: left; /* Ensure text alignment is clean */
+}
+
+.dropdown-header {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    color: #555;
+    border-bottom: 1px solid #eee;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+.logout-btn {
+    font-weight: 600;
+    color: #dc3545; /* Red color for visual urgency */
+}
+
+.dropdown-divider {
+    height: 1px;
+    background-color: #eee;
+    margin: 5px 0;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 600px) {
+    .profile-name {
+        /* Hide the user name on small screens to save space */
+        display: none; 
+    }
+    
+    .profile-trigger {
+        padding: 5px; 
+    }
+
+    .profile-avatar {
+        margin-right: 0;
+    }
+}

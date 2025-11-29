@@ -1,0 +1,154 @@
+/* ResultPage.css */
+
+.result-page-container {
+    padding: 50px 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.result-title {
+    color: #052C65;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* --- Result Summary Box --- */
+.result-summary {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.summary-status {
+    padding: 25px;
+    text-align: center;
+    color: white;
+}
+
+.summary-status h2 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.summary-status.status-positive {
+    background-color: #dc3545; /* Red */
+}
+.summary-status.status-negative {
+    background-color: #28a745; /* Green */
+}
+
+.analysis-note {
+    padding: 20px;
+    font-size: 1.1rem;
+    color: #555;
+    text-align: center;
+}
+
+/* --- Result Grid --- */
+.result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.result-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.result-card h3 {
+    color: #0A58CB;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.result-link {
+    display: block;
+    margin-top: 15px;
+    color: #052C65;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* --- Graph Styling --- */
+.result-graph-area {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 150px;
+    gap: 30px;
+    padding-top: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.result-bar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+    height: 100%;
+    position: relative;
+}
+
+.result-bar {
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+    transition: height 0.5s ease-out;
+    background-color: #ccc;
+}
+
+.result-parasitized {
+    background-color: #dc3545;
+}
+
+.result-uninfected {
+    background-color: #28a745;
+}
+
+.result-label {
+    position: absolute;
+    bottom: -20px;
+    font-size: 0.85rem;
+    color: #555;
+    white-space: nowrap;
+}
+
+/* ResultPage.css (Add or update these rules) */
+
+.result-actions {
+    margin-bottom: 20px;
+}
+
+.result-btn-back {
+    padding: 8px 15px;
+    border: 1px solid #052C65;
+    background: white;
+    color: #052C65;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.result-btn-back:hover {
+    background-color: #f0f4f8;
+}
+
+/* Update the grid area to ensure the button has space at the top */
+.result-title {
+    /* Removed margin-top to keep it close to the button/header area */
+    margin-top: 0;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,40 @@
+# --- Python Virtual Environments (Venvs) ---
+venv/
+.venv/
+
+# --- Database and User Data ---
+instance/        # Contains the malaria.db file
+*.db
+uploads/         # User-uploaded images
+
+# --- Model Artifacts (If too big for standard Git) ---
+# Use Git LFS for these if they are > 100MB
+*.h5
+*.keras
+*.pkl# Python venv
+venv/
+.venv/
+back/venv/
+
+# Python junk
+__pycache__/
+*.pyc
+
+# Flask instance & uploads
+back/instance/
+back/uploads/
+
+# ML models & datasets
+back/models/
+training/dataset/
+*.h5
+
+# Node / React
+back/frontend/node_modules/
+back/frontend/build/
+back/frontend/dist/
+
+
+# --- Compiled/Temporary Python Files ---
+__pycache__/
+*.pyc

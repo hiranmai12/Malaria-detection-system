@@ -1,0 +1,153 @@
+/* History.css (Updated and Corrected) */
+
+/* The main page container structure */
+.page-root {
+    display: flex;
+    min-height: 100vh;
+    background-color: white;
+}
+
+/* Sidebar Styles (Base) */
+.sidebar {
+    width: 220px;
+    background: linear-gradient(to bottom, #052C65, #0A58CB);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+.sidebar ul { list-style: none; padding: 0; }
+.sidebar li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 0.2s;
+}
+
+/* --- Main Content Area --- */
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+    overflow-y: auto;
+    max-width: 900px;
+    /* FIX: Set left/right margin to auto to center the entire main content area 
+       if the page root allows it to shrink below 100vh */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* FIX: H2 STYLING FOR FULL BORDER AND CENTERING */
+.main-content h2 {
+    color: #052C65;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    /* Ensure H2 border spans correctly */
+    width: 100%; 
+}
+
+
+/* ------------------------------------------- */
+/* --- Empty State Message (Centering Fix) --- */
+/* ------------------------------------------- */
+.empty-history-message {
+    /* FIX: No need for excessive flex centering here; use standard block centering on parent */
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items (image, p tags) horizontally */
+    
+    /* Adds vertical spacing and visual appeal */
+    margin-top: 50px;
+    padding: 20px;
+    background-color: white; /* Added background for clarity */
+    border-radius: 8px;
+    
+    /* Ensure this message itself is wide enough but doesn't take up full width */
+    max-width: 600px; 
+    
+    /* Crucial for centering the block itself within the main-content space */
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.empty-history-image {
+    max-width: 400px; /* Increased size for visual impact */
+    height: auto;
+    margin-bottom: 20px;
+   
+    /* The image is centered because its parent (.empty-history-message) uses align-items: center */
+}
+
+.empty-history-message p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.empty-history-message a {
+    font-weight: bold;
+    color: #052C65;
+    text-decoration: none;
+}
+/* ------------------------------------------- */
+
+
+/* --- History Table Styling (Remaining Unchanged) --- */
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.history-table th, 
+.history-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.history-table th {
+    background-color: #e9ecef;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.history-table tbody tr:hover { background-color: #f8f9fa; }
+.history-table tbody tr:nth-child(even) { background-color: #fafafa; }
+.history-table .pos { font-weight: bold; color: #dc3545; }
+.history-table .neg { font-weight: bold; color: #28a745; }
+
+/* Empty State Message (Old general rule removal) */
+.main-content > p {
+    /* Keeping this for general messages like 'Loading...' */
+    padding: 20px;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .page-root { flex-direction: column; }
+    .sidebar { width: 100%; display: flex; padding: 15px; }
+    .sidebar ul { display: flex; justify-content: space-around; flex-grow: 1; }
+    .main-content { overflow-x: auto; padding: 20px; }
+    .history-table { min-width: 600px; }
+    
+    /* Ensure the empty message is still centered on small screens */
+    .empty-history-message {
+        max-width: 90%; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

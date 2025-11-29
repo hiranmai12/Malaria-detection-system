@@ -1,0 +1,259 @@
+/* --- Global and Base Styles (Affects all components) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
+html, body {
+    font-size: 16px;
+    zoom: 100%;
+}
+
+/* --- Global Navbar/Button Styles (Used by Header.js/Top Nav) --- */
+.top-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+}
+
+.top-navbar .logo {
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    cursor: pointer;
+}
+
+
+
+/* Button styles */
+.btn-outline {
+    border: 1px solid #052C65;
+    padding: 5px 12px;
+    border-radius: 6px;
+    color: #052C65;
+}
+
+.btn-primary {
+    background: #052C65;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 6px;
+}
+.btn-primary a {
+    color: white;
+}
+
+/* --- General Layouts (Used by AboutPage) --- */
+.about-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-section {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+/* AboutPage Sidebar Styles */
+.sidebar {
+    width: 220px;
+    background: linear-gradient(to bottom, #052C65, #0A58CB);
+    color: white;
+    padding: 20px 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    cursor: pointer;
+}
+
+.sidebar li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 0.2s;
+    margin-bottom: 5px;
+}
+
+.sidebar li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-active a {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+
+.steps-with-images {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.step-block {
+    background: #ffffff;
+    border: 1px solid #dde3ea;
+    border-radius: 10px;
+    padding: 18px 20px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.step-heading {
+    font-size: 1.2rem;
+    color: #052C65;
+    margin-bottom: 8px;
+}
+
+.step-image {
+    width: 100%;
+    max-width: 520px;
+    margin-top: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    display: block;
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+  .instructions-layout {
+    flex-direction: column;
+  }
+}
+
+
+/* Global H1 Gradient Style */
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    background: linear-gradient(to right, #052C65, #0A58CB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+
+
+.disclaimer-text { font-style: italic; color: #c0392b; font-size: 0.9rem; }
+
+
+/* Fixed Footer/Disclaimer */
+.disclaimer {
+    color: red !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 10px 20px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+    background-color: white;
+}
+
+
+.instruction-step-title {
+    font-size: 30px; /* smaller than original dashboard h2 */
+}
+
+
+
+@media (max-width: 600px) {
+    .dashboard-main-content {
+        padding: 20px;
+        padding-bottom: 70px;
+    }
+    .app-container {
+        flex-direction: column;
+    }
+    
+    /* UNIFIED FULL-WIDTH STACK for both sidebars */
+  
+    .sidebar {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 15px;
+    }
+    
+    .sidebar ,.app-title {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+        padding: 8px 15px;
+        flex-grow: 1;
+    }
+    
+   
+    .sidebar ul {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .sidebar li {
+        width: auto;
+    }
+    .sidebar li a {
+        padding: 8px 10px;
+        text-align: center;
+        margin: 0 5px;
+        
+    }
+}
+
+
+
+
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.step-image {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* The pointing label */
+.pointing-text {
+    position: absolute;
+    bottom: 20px;       /* adjust to match your screenshot */
+    left: 20px;      /* adjust position to point at correct spot */
+    background: #052C65;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
